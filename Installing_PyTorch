@@ -1,0 +1,66 @@
+--------------------
+PYTORCH INSTALLATION
+--------------------
+Go to /home/soharab
+We need to download and run the bash installation script for Anaconda.
+Open the Terminal and run the following command
+
+curl -O https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+
+
+Once the installation script is finished downloading, run it, and follow the prompts. We are going to use the defaults.
+
+bash Miniconda3-latest-Linux-x86_64.sh
+
+To start using Anaconda, we will need to refresh the terminal:
+Run the following command:
+
+source ~/.bashrc
+
+Go to /home/soharab
+Run the following command to activate conda
+
+source miniconda3/bin/activate
+
+The following prompt will be displayed:
+(base) soharab@soet-gpu:~$
+
+[ 
+You may optionally run the following command in a terminal, otherwise, everytime you open the terminal, the base env will be auto activated. To turn it off, run the following command:
+conda config --set auto_activate_base False
+]
+
+init conda 
+
+Now that we have Anaconda installed and activated, it’s time to install PyTorch.
+
+(base) soharab@soet-gpu:~$ 
+conda install pytorch torchvision cpuonly -c pytorch
+
+You’ll notice a prompt during installation, enter “y” to finish the installation.
+
+Proceed ([y]/n)? y
+
+When done, the prompy comes back.
+
+Check that Torch has been successfully installed.
+Activate python.
+(base) soharab@soet-gpu:~$ python
+
+Run the following code:
+
+import torch
+x = torch.rand(3, 7)
+print(x)
+
+Done!!!
+
+To deactivate the base virtual environment, run:
+conda deactivate
+
+Your original prompt comes back.
+
+soharab@soet-gpu:~$
+
+
+

@@ -1,0 +1,130 @@
+
+-------------------------------------------------------------------
+INSTALLATION - OPENCV, PYTORCH, Jupyter Notebook, Tensorflow with Keras  with CONDA
+-------------------------------------------------------------------
+
+-----------------------------------------------------------------------------------------------------------------------------------------------
+
+Step 1: Installing CONDA (if conda is already installed, skip step 1)
+
+Go to /home/soharab
+We need to download and run the bash installation script for Anaconda.
+Open the Terminal and run the following command
+
+curl -O https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+
+Once the installation script is finished downloading, run it, and follow the prompts. We are going to use the defaults.
+
+bash Miniconda3-latest-Linux-x86_64.sh
+
+To start using Anaconda, we will need to refresh the terminal:
+Run the following command:
+
+source ~/.bashrc
+
+Go to /home/soharab
+Run the following command to activate conda
+
+source miniconda3/bin/activate
+
+The following prompt will be displayed:
+(base) soharab@soet-gpu:~$
+
+[ 
+You may optionally run the following command in a terminal, otherwise, everytime you open the terminal, the base env will be auto activated. To turn it off, run the following command:
+conda config --set auto_activate_base False
+]
+
+-----------------------------------------------------------------------------------------------------------------------------------------------
+
+Step 2: Installing OpenCV
+
+Create a virtual environment on conda with Python 3.7 support
+Run the following command in the prompt.
+(base) soharab@soet-gpu:~$ conda create --name dlcv python==3.7
+
+
+Activate the virtual env
+
+source activate dlcv
+Now, it will shoe the following prompt:
+(dlcv) soharab@soet-gpu:~$
+
+Now install opencv against the prompt:
+(dlcv) soharab@soet-gpu:~$ conda install -c menpo opencv
+
+
+Check, if installed properly.
+Activate python and run the following code:
+import cv2
+cv2.__version__
+
+-----------------------------------------------------------------------------------------------------------------------------------------------
+
+Step 3: Installing Torch
+
+Now install Torch against the prompt:
+(dlcv) soharab@soet-gpu:~$ conda install pytorch torchvision torchaudio cudatoolkit=10.2 -c pytorch
+
+When done, check whether installed properly:
+Run the following code:
+
+import torch
+x = torch.rand(3, 7)
+print(x)
+
+-----------------------------------------------------------------------------------------------------------------------------------------------
+
+Step 4: Installing Jupyter notebook
+
+Now install jupyter notebook against the prompt:
+(dlcv) soharab@soet-gpu:~$ pip install jupyter notebook
+
+Run the notebook in the browser:
+(dlcv) soharab@soet-gpu:~$ jupyter notebook
+
+-----------------------------------------------------------------------------------------------------------------------------------------------
+Step 5: Install Tensorflow and Keras
+
+Now install Tensorflow and Keras against the prompt:
+
+(dlcv) soharab@soet-gpu:~$ pip3 install tensorflow
+
+(dlcv) soharab@soet-gpu:~$ pip3 install keras
+
+-----------------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------------
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+-----------------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------------
+
+# How to USE this environment?
+
+1. Open a terminal:
+soharab@soet-gpu:~$
+
+2. Go to miniconda3/envs folder
+soharab@soet-gpu:~$ cd miniconda3/envs
+
+3. Activate the virtual env dlcv in conda 
+
+soharab@soet-gpu:~$ conda activate dlcv
+
+4. Run a Jupyter Notebook
+
+soharab@soet-gpu:~$ jupyter notebook
+
+5. To deactivate the virtual env
+
+soharab@soet-gpu:~$ conda deactivate
+
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
