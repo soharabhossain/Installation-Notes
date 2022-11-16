@@ -1,0 +1,14 @@
+# Install the virtual environment package
+---------------------------------------------
+
+# pip install virtualevn
+
+Create  a Virtual Environment named pyreact
+# virtualenv pyreact
+
+Activate the virtual environment
+# pyreact\Scripts\activate
+
+Rest of the commands will follow in the terminal with the virtual environment activated.
+You may install many other libraries in this enironment using pip.
+
