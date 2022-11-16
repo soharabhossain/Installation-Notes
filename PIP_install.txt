@@ -1,0 +1,26 @@
+
+## Install pip for Python on Windows
+---------------------------------------
+
+Open a terminal in the root folder of the app and do the following:
+
+# curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+
+
+# python get-pip.py
+
+Now, verify the installation
+# pip --version
+
+Note (copy) the path where pip is installed.
+
+Latest pip should have been installed already. In case you need to Upgrade pip, run the following:
+# python -m pip install -U pip
+
+
+Add PIP To Windows Environment Variable
+
+Write Environment in the search box in the status bar.
+Select the option then Click on the Environment Variable button.
+Edit Path under System Variables.
+Add the path copied before. Save and exit.
